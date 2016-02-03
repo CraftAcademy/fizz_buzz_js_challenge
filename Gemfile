@@ -6,6 +6,7 @@ gem 'rack'
 gem 'sinatra'
 
 group :development, :test do
+  gem 'webmock'
   gem 'jasmine'
   gem 'coveralls', require: false
 end
