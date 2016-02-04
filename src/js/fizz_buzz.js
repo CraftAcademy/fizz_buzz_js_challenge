@@ -1,4 +1,5 @@
-function FizzBuzz() {};
+function FizzBuzz(){
+};
 
 FizzBuzz.prototype._hasZeroReminder = function(number, divisor) {
   return (number % divisor === 0);
