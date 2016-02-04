@@ -14,7 +14,8 @@
 # end
 #
 require 'coveralls'
-Coveralls.wear!
+Coveralls.wear_merged!
+SimpleCov.command_name 'Unit Tests'
 # Without this, WebMock blocks "rake jasmine:ci" for travis
 module Jasmine
   class Config
