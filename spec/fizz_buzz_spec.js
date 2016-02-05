@@ -4,7 +4,6 @@ describe("FizzBuzz - Unit tests", function() {
 
   beforeEach(function() {
     slot = new FizzBuzz();
-    divisor_check = new FizzBuzz({number: 9, divisor: 3});
     game = new Game({number: 6});
     game_2 = new Game({number: 10});
     game_3 = new Game({number: 30});
@@ -12,12 +11,11 @@ describe("FizzBuzz - Unit tests", function() {
   });
 
   it("check if 9 is divisable by 3 ", function() {
-    slot._hasZeroReminder(divisor_check);
-    expect(divisor_check._hasZeroReminder).toEqual(result);
+    expect(slot._hasZeroReminder(9,3)).toEqual(true);
   });
 
   it("check if number is divisable by 3", function() {
-    slot._hasZeroReminder(game, 3);
+    //slot._hasZeroReminder(game, 3);
     expect(game.divisibleByThree).toEqual(2);
   });
 
