@@ -3,18 +3,50 @@ describe('FizzBuzz - Acceptance tests', function() {
     jasmine.getFixtures().fixturesPath = '.';
     loadFixtures('index.html');
     $.holdReady(false);
-  });
-  //Add your specs here. We've added some it blocks for you to consider
 
-  it("displays Fizz if entred value is divisible with 3", function() {
-    //place your expectation here
-  });
+  describe('try_1', function() {
+      beforeEach(function() {
+        $('#input').val('12');
+        $('#calculate').trigger('click');
+      });
 
-  it("displays Buzz if entred value is divisible with 5", function() {
-    //place your expectation here
-  });
+      it("displays Fizz if input is divisible by 3", function() {
+        expect($('#display_message').text()).toBe('you just got Fizz');
+      });
+    });
 
-  it("displays FizzBuzz if entred value is divisible with 15", function() {
-    //place your expectation here
+
+  describe('try_2', function() {
+      beforeEach(function() {
+        $('#input').val('25');
+        $('#calculate').trigger('click');
+      });
+
+      it("displays Buzz if input is divisible by 3", function() {
+        expect($('#display_message').text()).toBe('you just got Buzz');
+      });
+    });
+
+  describe('try_3', function() {
+      beforeEach(function() {
+        $('#input').val('12');
+        $('#calculate').trigger('click');
+      });
+
+      it("displays FizzBuzz if input is divisible by 3", function() {
+        expect($('#display_message').text()).toBe('you just got FizzBuzz');
+      });
+    });
+
+    describe('try_4', function() {
+        beforeEach(function() {
+          $('#input').val('26');
+          $('#calculate').trigger('click');
+        });
+
+        it("displays same number if input is divisible by 3", function() {
+          expect($('#display_message').text()).toBe('you just got 26');
+        });
+      });
   });
 });

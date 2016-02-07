@@ -9,10 +9,31 @@
 <body>
   <h3>FizzBuzz Check</h3>
   <!-- Place your HTML code here -->
+  <form>
+    <input type="text" id="input" placeholder="number" class="form-control">
+    <div class="form-group">
+      <input type="button" id="calculate" value="Calculate" class="btn btn-default">
+    </div>
+  </form>
 
+  <div class="col-md-6">
+    <h4><span id="display_message"></span></h4>
+  </div>
   <!-- require or enter any other .js files/code below jQuery and fizz_buzz,js -->
   <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
   <script src="/js/fizz_buzz.js"></script>
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#calculate').click(function () {
+     var n = parseFloat($('#input').val());
+     var game = new FizzBuzz({number: n})
+     var output = game.fizz_buzz(n)
+    $('#display_message').html('you just got' + " " + output );
+    });
+  });
+</script>

@@ -1,5 +1,4 @@
 describe("FizzBuzz - Unit tests", function() {
-  //var slot;
   var game;
 
   beforeEach(function() {
