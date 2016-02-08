@@ -4,7 +4,7 @@ describe('FizzBuzz - Acceptance tests', function() {
     loadFixtures('index.html');
     $.holdReady(false);
 
-  describe('try_1', function() {
+    describe('try_1', function() {
       beforeEach(function() {
         $('#input').val('12');
         $('#calculate').trigger('click');
@@ -16,7 +16,7 @@ describe('FizzBuzz - Acceptance tests', function() {
     });
 
 
-  describe('try_2', function() {
+    describe('try_2', function() {
       beforeEach(function() {
         $('#input').val('25');
         $('#calculate').trigger('click');
@@ -27,7 +27,7 @@ describe('FizzBuzz - Acceptance tests', function() {
       });
     });
 
-  describe('try_3', function() {
+    describe('try_3', function() {
       beforeEach(function() {
         $('#input').val('12');
         $('#calculate').trigger('click');
@@ -39,14 +39,14 @@ describe('FizzBuzz - Acceptance tests', function() {
     });
 
     describe('try_4', function() {
-        beforeEach(function() {
-          $('#input').val('26');
-          $('#calculate').trigger('click');
-        });
-
-        it("displays same number if input is divisible by 3", function() {
-          expect($('#display_message').text()).toBe('you just got 26');
-        });
+      beforeEach(function() {
+        $('#input').val('26');
+        $('#calculate').trigger('click');
       });
+
+      it("displays same number if input is divisible by 3", function() {
+        expect($('#display_message').text()).toBe('you just got 26');
+      });
+    });
   });
 });
