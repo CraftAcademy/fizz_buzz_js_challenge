@@ -5,6 +5,7 @@
 src_files:
   - 'https://code.jquery.com/jquery-2.1.4.js'
   - /**/*.js
+  - src/js/fizz_buzz.js
 
 # stylesheets
 #
@@ -27,7 +28,7 @@ helpers:
 
 spec_files:
   - '**/*[sS]pec.js'
-
+  - 'spec/fizz_buzz_spec.js'
 # src_dir
 #
 # Source directory path. Your src_files must be returned relative to this path. Will use root if left blank.
@@ -39,6 +40,7 @@ src_dir: src
 #
 # Spec directory path. Your spec_files must be returned relative to this path.
 # Default: spec/javascripts
+
 
 spec_dir: spec
 
