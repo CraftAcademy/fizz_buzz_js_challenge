@@ -13,9 +13,9 @@
 #   config.prevent_phantom_js_auto_install = true
 # end
 #
+# Add coveralls
 require 'coveralls'
-Coveralls.wear_merged!
-SimpleCov.command_name 'Unit Tests'
+Coveralls.wear!
 # Without this, WebMock blocks "rake jasmine:ci" for travis
 module Jasmine
   class Config
