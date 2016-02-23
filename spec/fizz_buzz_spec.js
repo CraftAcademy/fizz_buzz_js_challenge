@@ -5,7 +5,7 @@ describe("FizzBuzz - Unit tests", function() {
     game = new FizzBuzz();
   });
 
-  it("check if 9 is divisable by 3 has zero reminder ", function() {
+  it("check if the reminder of 9 divided by 3 equal zero  ", function() {
     expect(game._hasZeroReminder(9, 3)).toEqual(true);
   });
 
@@ -32,6 +32,7 @@ describe("FizzBuzz - Unit tests", function() {
   it("return fizzbuzz if number is divisable by 3 & 5 ", function() {
     expect(game.fizz_buzz(15)).toEqual("FizzBuzz");
   });
+
   it("return same number if number is not divisable by 3 or 5", function() {
     expect(game.fizz_buzz(4)).toEqual(4);
   });

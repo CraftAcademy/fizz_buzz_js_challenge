@@ -1,17 +1,17 @@
 $(document).ready(function() {
   $('#calculate').click(function() {
-    var number = parseFloat($('#Number').val());
+    var number = parseFloat($('#number').val());
     var game = new FizzBuzz({
       number: number
     })
     element = $('#display_message');
     var output = game.fizz_buzz(number)
-    change_class(output);
+    changeClass(output);
     element.html('Yeah! You got a ' + output + ' response!');
   });
 });
 
-function change_class(output) {
+function changeClass(output) {
   switch (output) {
     case 'FizzBuzz':
       element.attr('class', '').addClass('alert alert-success');
@@ -24,7 +24,5 @@ function change_class(output) {
       break;
     default:
       element.attr('class', '').addClass('alert');
-
   }
-
 }

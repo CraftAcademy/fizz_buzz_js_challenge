@@ -7,7 +7,7 @@ describe('FizzBuzz - Acceptance tests', function() {
 
   describe('Should give a fizz response', function() {
     beforeEach(function() {
-      $('#Number').val('12');
+      $('#number').val('12');
       $('#calculate').trigger('click');
     });
 
@@ -19,7 +19,7 @@ describe('FizzBuzz - Acceptance tests', function() {
 
   describe('Should give a buzz response', function() {
     beforeEach(function() {
-      $('#Number').val('25');
+      $('#number').val('25');
       $('#calculate').trigger('click');
     });
 
@@ -30,7 +30,7 @@ describe('FizzBuzz - Acceptance tests', function() {
 
   describe('Should give a fizz_buzz response', function() {
     beforeEach(function() {
-      $('#Number').val('15');
+      $('#number').val('15');
       $('#calculate').trigger('click');
     });
 
@@ -41,7 +41,7 @@ describe('FizzBuzz - Acceptance tests', function() {
 
   describe('it should give the number', function() {
     beforeEach(function() {
-      $('#Number').val('7');
+      $('#number').val('7');
       $('#calculate').trigger('click');
     });
 
