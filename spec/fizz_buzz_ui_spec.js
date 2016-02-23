@@ -4,17 +4,49 @@ describe('FizzBuzz - Acceptance tests', function() {
     loadFixtures('index.html');
     $.holdReady(false);
   });
-  //Add your specs here. We've added some it blocks for you to consider
 
-  it("displays Fizz if entred value is divisible with 3", function() {
-    //place your expectation here
+  describe('Should give a fizz response', function() {
+    beforeEach(function() {
+      $('#number').val('12');
+      $('#calculate').trigger('click');
+    });
+
+    it("displays Fizz if input is divisible by 3", function() {
+      expect($('#display_message').text()).toEqual('Yeah! You got a Fizz response!');
+    });
   });
 
-  it("displays Buzz if entred value is divisible with 5", function() {
-    //place your expectation here
+
+  describe('Should give a buzz response', function() {
+    beforeEach(function() {
+      $('#number').val('25');
+      $('#calculate').trigger('click');
+    });
+
+    it("displays Buzz if input is divisible by 5", function() {
+      expect($('#display_message').text()).toBe('Yeah! You got a Buzz response!');
+    });
   });
 
-  it("displays FizzBuzz if entred value is divisible with 15", function() {
-    //place your expectation here
+  describe('Should give a fizz_buzz response', function() {
+    beforeEach(function() {
+      $('#number').val('15');
+      $('#calculate').trigger('click');
+    });
+
+    it("displays FizzBuzz if input is divisible by 5 and 3", function() {
+      expect($('#display_message').text()).toBe('Yeah! You got a FizzBuzz response!');
+    });
+  });
+
+  describe('it should give the number', function() {
+    beforeEach(function() {
+      $('#number').val('7');
+      $('#calculate').trigger('click');
+    });
+
+    it("displays same number if input isn't  divisible by 3 or 5", function() {
+      expect($('#display_message').text()).toBe('Yeah! You got a 7 response!');
+    });
   });
 });
